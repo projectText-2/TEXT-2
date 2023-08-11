@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>피드리스트</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="../../static/css/trade/tradeList.css">
+    <script src="../../static/js/trade/tradeList.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="appWrapper">
+        <div class="SocialFeedPage">
+            <!-- 피드헤더~~~~~~ -->
+            <div class="SocialFeedPage-Header">
+                <div>
+                    <span class="SocialFeedPage-Title">피드</span>
+                    <button class="SocialFeedPage-button">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E %3Cpath fill='%23CCC' d='M8.5 0C13.194 0 17 3.806 17 8.5S13.194 17 8.5 17 0 13.194 0 8.5 3.806 0 8.5 0zm0 1.5c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm-.09 9.22c.613 0 .92.32.92.96 0 .64-.307.96-.92.96-.607 0-.91-.32-.91-.96 0-.64.303-.96.91-.96zm.15-5.95c.627 0 1.123.157 1.49.47.393.333.59.81.59 1.43 0 .313-.09.62-.27.92-.073.113-.163.24-.27.38l-.47.54c-.053.06-.1.12-.14.18-.107.133-.19.26-.25.38-.16.293-.223.597-.19.91H7.77c-.053-.367-.01-.717.13-1.05.053-.133.13-.273.23-.42.073-.113.167-.24.28-.38l.56-.68c.173-.247.26-.473.26-.68 0-.547-.283-.82-.85-.82-.38 0-.75.187-1.11.56l-.81-.74c.273-.313.58-.553.92-.72.367-.187.76-.28 1.18-.28z'/%3E %3C/svg%3E" alt="프립 피드란?">
+                    </button>
+                </div>
+            </div>
+            <!-- 피드 헤더아래~~~~~~~~ -->
+            <div class="SocialFeedPage-Content" style="opacity: 1; display: block">
+                <div class="FeedList" id="FeedList">
+
+                    <!-- 1 ------------------------------------------ -->
+                    <div class="Post">
+                        <!-- 1. 피드 contents - 프로필 이름, 사진, 시간-->
+                        <div class="FeedList-ProfileWrapper">
+                            <div class="UserProfileWrapper">
+                                <div class="ProfileImageWrapper">
+                                    <div class="ProfileImage-Wrapper">
+                                        <img
+                                                class="ImageLoader"
+                                                width="36"
+                                                height="36"
+                                                src="http://k.kakaocdn.net/dn/7kBMX/btqkm1Aaf6J/sGfLXjx1P9QyKMK07lfBbk/profile_110x110c.jpg"
+                                        />
+                                        <div class="Fade-Wrapper" style="opacity: 1; display: block">
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                        class="Ratio-ratio"
+                                                        style="
+                                height: 0px;
+                                position: relative;
+                                width: 100%;
+                                padding-top: 100%;
+                              "
+                                                >
+                                                    <div
+                                                            class="Ratio-content"
+                                                            style="
+                                  height: 100%;
+                                  left: 0px;
+                                  position: absolute;
+                                  top: 0px;
+                                  width: 100%;
+                                "
+                                                    >
+                                                        <!-- 프로필이미지 -->
+                                                        <img
+                                                                class="StyledImage"
+                                                                width="36px"
+                                                                height="36px"
+                                                                src="http://k.kakaocdn.net/dn/7kBMX/btqkm1Aaf6J/sGfLXjx1P9QyKMK07lfBbk/profile_110x110c.jpg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProfileTextWrapper">
+                                    <p class="Profile-Name">유아람</p>
+                                    <div class="Profile-Time">20초전</div>
+                                </div>
+                            </div>
+                            <button class="UserProfileButton">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E" alt="더보기">
+                            </button>
+                        </div>
+                        <!-- 2. 피드 contents - 사진 -->
+                        <div class="FeedList-ImageWrapper" style="display: block">
+                            <div
+                                    class="Ratio-ratio"
+                                    style="height: 0px; position: relative; width: 100%; padding-top: 100%"
+                            >
+                                <div
+                                        class="Ratio-content"
+                                        style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%"
+                                >
+                                    <div class="FeedImage-Wrapper">
+                                        <div class="FeedImage-ImageLoader">
+                                            <img
+                                                    src="../../static/img/trade/피드여행(1).jpg" height="876"
+                                                               width="1170"/>
+                                                    alt=""
+                                            />
+                                        </div>
+                                        <div class="Fade-Wrapper" style="opacity: 1; display: block">
+                                            <div>
+                                                <img src="../../static/img/trade/피드여행(1).jpg" alt=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3. 피드 contents - a태그 -->
+                        <a class="FeedList-LinkCardWrapper" href="">
+                            <div class="maybe-category">[분류]</div>
+                            <div class="ContentTitle">
+                                비행기가 가까이서 보여요
+                            </div>
+                        </a>
+                        <!-- 4. 피드 contents - 본문내용 discription -->
+                        <div class="FeedList-Description">
+                            <span class="Content-Description">비행기를 보고오니 참 좋아요 가까이서 보입니다</span>
+                            <button class="Description-ExpendButton">더보기</button>
+                        </div>
+                        <!-- 5. 피드 contents - 하트, 댓글 -->
+                        <div class="FeedList-ActionGroup">
+                            <button type="button" class="ActionGroup-heart">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='18' viewBox='0 0 21 18'%3E %3Cpath fill='none' stroke='%234E5968' stroke-width='1.5' d='M15.657.75c-1.226 0-2.379.485-3.246 1.365l-1.91 1.94-1.912-1.94C7.722 1.235 6.57.75 5.343.75s-2.378.485-3.245 1.365C1.198 3.028.75 4.227.75 5.425c0 1.199.448 2.398 1.348 3.31l8.425 8.504 8.379-8.504c.9-.912 1.348-2.111 1.348-3.31 0-1.198-.448-2.397-1.347-3.31-.867-.88-2.02-1.365-3.246-1.365z'/%3E %3C/svg%3E" alt="좋아요~">                        <span class="ActionGroup-Score">100</span>
+                            </button>
+                            <a class="ActionGroup-ReplyLink" href="">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='18' viewBox='0 0 21 18'%3E %3Cpath fill='none' stroke='%234E5968' stroke-width='1.5' d='M20.25.75H.75v11.818h3.842v4.015l5.9-4.015h9.758V.75z'/%3E %3C/svg%3E" alt="댓글">                        <span class="ActionGroup-Score">30</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2 -----------------------사진 여러장인 경우-!!!!!!!!!!----------------------------------------- -->
+                    <div class="Post">
+                        <!-- 1. 피드 contents - 프로필 이름, 사진, 시간-->
+                        <div class="FeedList-ProfileWrapper">
+                            <div class="UserProfileWrapper">
+                                <div class="ProfileImageWrapper">
+                                    <div class="ProfileImage-Wrapper">
+                                        <img
+                                                class="ImageLoader"
+                                                width="36"
+                                                height="36"
+                                                src="../../static/img/trade/피드(2).jpg"
+                                        />
+                                        <div class="Fade-Wrapper" style="opacity: 1; display: block">
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                        class="Ratio-ratio"
+                                                        style="
+                                height: 0px;
+                                position: relative;
+                                width: 100%;
+                                padding-top: 100%;
+                              "
+                                                >
+                                                    <div
+                                                            class="Ratio-content"
+                                                            style="
+                                  height: 100%;
+                                  left: 0px;
+                                  position: absolute;
+                                  top: 0px;
+                                  width: 100%;
+                                "
+                                                    >
+                                                        <img
+                                                                class="StyledImage"
+                                                                width="36px"
+                                                                height="36px"
+                                                                src="../../static/img/trade/피드(2).jpg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProfileTextWrapper">
+                                    <p class="Profile-Name">황진서</p>
+                                    <div class="Profile-Time">50분전</div>
+                                </div>
+                            </div>
+                            <button class="UserProfileButton">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E" alt="더보기">
+                            </button>
+                        </div>
+
+
+                        <!-- 2. 피드 contents - 사진 -->
+                        <div class="FeedList-ImageWrapper" style="display: block">
+                            <div
+                                    class="Ratio-ratio"
+                                    style="height: 0px; position: relative; width: 100%; padding-top: 100%"
+                            >
+                                <div  class="Ratio-content" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%">
+                                    <div class="Slider-Wrapper">
+                                        <div class="slick-slider">
+                                            <!-- 왼쪽버튼 -->
+                                            <img data-role="none" class="slick-Button-left" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E"  alt="" style="display: block;">
+                                            <!-- 사진들어가는거 -->
+                                            <div class="slick-list">
+
+
+                                                <!-- 사진목록 슬라이드목록 -->
+                                                <div class="slick-track" style="opacity: 1; transform: translated3d(0px, 0px, 0px); width: 688px;">
+                                                    <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 344px">
+                                                        <div>
+                                                            <div class="FeedImage-wrapper2">
+                                                                <div class="FeedImage-ImageLoader">
+                                                                    <img src="../../static/img/trade/피드여행(2).jpg">
+                                                                </div>
+                                                                <div class="Fade-Wrapper" style=" opacity: 1; display: block;">
+                                                                    <div>
+                                                                        <img src="../../static/img/trade/피드여행(2).jpg">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 344px">
+                                                        <div>
+                                                            <div class="FeedImage-wrapper2">
+                                                                <div class="FeedImage-ImageLoader">
+                                                                    <img src="../../static/img/trade/피드여행(3).jpg">
+                                                                </div>
+                                                                <div class="Fade-Wrapper" style=" opacity: 1; display: block;">
+                                                                    <div>
+                                                                        <img src="../../static/img/trade/피드여행(3).jpg">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 오른쪽 버튼 -->
+                                            <img data-role="none" class="slick-Button-right" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E"  alt="" style="display: block;">
+                                            <!-- 밑에 사진 장수만큼 쩜쩜쩜 -->
+                                            <ul class="slick-dots">
+                                                <li class="slick-active">
+                                                    <button></button>
+                                                </li>
+                                                <li>
+                                                    <button></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. 피드 contents - a태그 -->
+                        <a class="FeedList-LinkCardWrapper" href="">
+                            <div class="maybe-category">[분류]</div>
+                            <div class="ContentTitle">
+                                a링크 안에
+                            </div>
+                        </a>
+                        <!-- 4. 피드 contents - 본문내용 discription -->
+                        <div class="FeedList-Description">
+                            <span class="Content-Description">안녕하세요 투르크메니스탄에 여행왔는데 좋네요 중앙아시아 여행 쉽지않군요</span>
+                            <button class="Description-ExpendButton">더보기</button>
+                        </div>
+                        <!-- 5. 피드 contents - 하트, 댓글 -->
+                        <div class="FeedList-ActionGroup">
+                            <button type="button" class="ActionGroup-heart">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='18' viewBox='0 0 21 18'%3E %3Cpath fill='none' stroke='%234E5968' stroke-width='1.5' d='M15.657.75c-1.226 0-2.379.485-3.246 1.365l-1.91 1.94-1.912-1.94C7.722 1.235 6.57.75 5.343.75s-2.378.485-3.245 1.365C1.198 3.028.75 4.227.75 5.425c0 1.199.448 2.398 1.348 3.31l8.425 8.504 8.379-8.504c.9-.912 1.348-2.111 1.348-3.31 0-1.198-.448-2.397-1.347-3.31-.867-.88-2.02-1.365-3.246-1.365z'/%3E %3C/svg%3E" alt="좋아요~">                        <span class="ActionGroup-Score">100</span>
+                            </button>
+                            <a class="ActionGroup-ReplyLink" href="">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='18' viewBox='0 0 21 18'%3E %3Cpath fill='none' stroke='%234E5968' stroke-width='1.5' d='M20.25.75H.75v11.818h3.842v4.015l5.9-4.015h9.758V.75z'/%3E %3C/svg%3E" alt="댓글">                        <span class="ActionGroup-Score">30</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2 -----------------------사진 여러장인 경우-!!!!!!!!!!----------------------------------------- -->
+                    <div>
+                        <!-- 1. 피드 contents - 프로필 이름, 사진, 시간-->
+                        <div class="FeedList-ProfileWrapper">
+                            <div class="UserProfileWrapper">
+                                <div class="ProfileImageWrapper">
+                                    <div class="ProfileImage-Wrapper">
+                                        <img
+                                                class="ImageLoader"
+                                                width="36"
+                                                height="36"
+                                                src="../../static/img/trade/피드(1).jpg"
+                                        />
+                                        <div class="Fade-Wrapper" style="opacity: 1; display: block">
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                        class="Ratio-ratio"
+                                                        style="
+                                  height: 0px;
+                                  position: relative;
+                                  width: 100%;
+                                  padding-top: 100%;
+                                "
+                                                >
+                                                    <div
+                                                            class="Ratio-content"
+                                                            style="
+                                    height: 100%;
+                                    left: 0px;
+                                    position: absolute;
+                                    top: 0px;
+                                    width: 100%;
+                                  "
+                                                    >
+                                                        <img
+                                                                class="StyledImage"
+                                                                width="36px"
+                                                                height="36px"
+                                                                src="../../static/img/trade/피드(1).jpg"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProfileTextWrapper">
+                                    <p class="Profile-Name">김밥</p>
+                                    <div class="Profile-Time">1시간전</div>
+                                </div>
+                            </div>
+                            <button class="UserProfileButton">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E" alt="더보기">
+                            </button>
+                        </div>
+
+
+                        <!-- 2. 피드 contents - 사진 -->
+                        <div class="FeedList-ImageWrapper" style="display: block">
+                            <div
+                                    class="Ratio-ratio"
+                                    style="height: 0px; position: relative; width: 100%; padding-top: 100%"
+                            >
+                                <div  class="Ratio-content" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%">
+                                    <div class="Slider-Wrapper">
+                                        <div class="slick-slider">
+                                            <!-- 왼쪽버튼 -->
+                                            <img data-role="none" class="slick-Button-left" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E"  alt="" style="display: block;">
+                                            <!-- 사진들어가는거 -->
+                                            <div class="slick-list">
+
+
+                                                <!-- 사진목록 슬라이드목록 -->
+                                                <div class="slick-track" style="opacity: 1; transform: translated3d(0px, 0px, 0px); width: 688px;">
+                                                    <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 344px">
+                                                        <div>
+                                                            <div class="FeedImage-wrapper2">
+                                                                <div class="FeedImage-ImageLoader">
+                                                                    <img src="../../static/img/trade/피드여행(3).jpg">
+                                                                </div>
+                                                                <div class="Fade-Wrapper" style=" opacity: 1; display: block;">
+                                                                    <div>
+                                                                        <img   src="../../static/img/trade/피드여행(3).jpg">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 344px">
+                                                        <div>
+                                                            <div class="FeedImage-wrapper2">
+                                                                <div class="FeedImage-ImageLoader">
+                                                                    <img src="https://res.cloudinary.com/frientrip/image/upload/ios_image_1162197_20230807122112265_021f2ebdbf712215f7ed415dbb041ac311eb5207f0c12338f8670c5c80da184d">
+                                                                </div>
+                                                                <div class="Fade-Wrapper" style=" opacity: 1; display: block;">
+                                                                    <div>
+                                                                        <img src="https://res.cloudinary.com/frientrip/image/upload/ios_image_1162197_20230807122112265_021f2ebdbf712215f7ed415dbb041ac311eb5207f0c12338f8670c5c80da184d">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 오른쪽 버튼 -->
+                                            <img data-role="none" class="slick-Button-right" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E"  alt="" style="display: block;">
+                                            <!-- 밑에 사진 장수만큼 쩜쩜쩜 -->
+                                            <ul class="slick-dots">
+                                                <li class="slick-active">
+                                                    <button></button>
+                                                </li>
+                                                <li>
+                                                    <button></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. 피드 contents - a태그 -->
+                        <a class="FeedList-LinkCardWrapper" href="">
+                            <div class="maybe-category">[분류]</div>
+                            <div class="ContentTitle">
+                                a링크 안에
+                            </div>
+                        </a>
+                        <!-- 4. 피드 contents - 본문내용 discription -->
+                        <div class="FeedList-Description">
+                            <span class="Content-Description">안녕하세요 투르크메니스탄에 여행왔는데 좋네요 중앙아시아 여행 쉽지않군요</span>
+                            <button class="Description-ExpendButton">더보기</button>
+                        </div>
+                        <!-- 5. 피드 contents - 하트, 댓글 -->
+                        <div class="FeedList-ActionGroup">
+                            <button type="button" class="ActionGroup-heart">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='18' viewBox='0 0 21 18'%3E %3Cpath fill='none' stroke='%234E5968' stroke-width='1.5' d='M15.657.75c-1.226 0-2.379.485-3.246 1.365l-1.91 1.94-1.912-1.94C7.722 1.235 6.57.75 5.343.75s-2.378.485-3.245 1.365C1.198 3.028.75 4.227.75 5.425c0 1.199.448 2.398 1.348 3.31l8.425 8.504 8.379-8.504c.9-.912 1.348-2.111 1.348-3.31 0-1.198-.448-2.397-1.347-3.31-.867-.88-2.02-1.365-3.246-1.365z'/%3E %3C/svg%3E" alt="좋아요~">                        <span class="ActionGroup-Score">100</span>
+                            </button>
+                            <a class="ActionGroup-ReplyLink" href="">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='18' viewBox='0 0 21 18'%3E %3Cpath fill='none' stroke='%234E5968' stroke-width='1.5' d='M20.25.75H.75v11.818h3.842v4.015l5.9-4.015h9.758V.75z'/%3E %3C/svg%3E" alt="댓글">                        <span class="ActionGroup-Score">30</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이 아래는 필요한지 잘 모르겠음  -->
+    <div class="FloatingButtonWrapper"></div>
+    <footer class="Footer-Wrapper"></footer>
+</div>
+</div>
+</body>
+</html>

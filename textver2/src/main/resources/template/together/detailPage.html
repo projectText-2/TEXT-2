@@ -10,12 +10,13 @@
 <title>Title</title>
 
 <link rel="stylesheet" href="../../static/css/inc/reset.css">
-<link rel="stylesheet" href="../../static/css/together/detailPage.css">
 <link rel="stylesheet" href="../../static/css/font/font.css">
+<link rel="stylesheet" href="../../static/css/together/detailPage.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
+
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="../../static/js/together/detailPage.js"></script>
+<script charset="UTF-8" src="../../static/js/together/detailPage.js"></script>
 
 <body>
 <th:block layout:fragment="header"></th:block>
@@ -25,51 +26,66 @@
             <div class="autoSet" style="opacity: 1; display: block">
                 <div class="positionR">
                     <div class="displayF">
-                        <!--                        게시글 내용 보이는 공간-->
+                        <!--    게시글 내용 보이는 공간-->
                         <div class="webkit">
-                            <!--                            이미지 섬네일 보이는 곳-->
+                            <!-- 이미지 섬네일 보이는 곳-->
                             <div class="profile">
                                 <div class="slick-slider visibility slick-initialized">
+                                    <!--  이전 썸네일로 이동-->
+                                    <img
+                                            class="pre slick-arrow slick-prev"
+                                            onclick="prevSlide()"
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E"
+                                            style="display: block;">
                                     <div class="slick-list">
-                                        <div
-                                                class="slick-track"
-                                                style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 375px"
-                                        >
-                                            <div
-                                                    data-index="0"
-                                                    class="slick-slide"
-                                                    tabindex="-1"
-                                                    aria-hidden="false"
-                                                    style="outline: none; width: 375px"
-                                            >
-                                                <div>
-                                                    <div>
-                                                        <img
-                                                                class="important"
-                                                                width="768"
-                                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_375/%EA%B7%B8%EB%A6%BC1_7d7c5fe53592993b60393ba08d9673edd7dadfd7a563a5a0615d6dd9d627c421"
-                                                        />
-                                                        <div class="autoSet" style="opacity: 1; display: block">
-                                                            <div class="Ratio" style="display: block">
-                                                                <div class="Ratio-ratio">
-                                                                    <div class="Ratio-content">
-                                                                        <img
-                                                                                alt="상품 이미지"
-                                                                                width="768"
-                                                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_375/%EA%B7%B8%EB%A6%BC1_7d7c5fe53592993b60393ba08d9673edd7dadfd7a563a5a0615d6dd9d627c421"
-                                                                        />
-                                                                    </div>
-                                                                </div>
+                                        <div class="slick-track">
+                                            <!-- 썸내일 리스트-->
+                                            <div class="slick-slide  active">
+                                                <div class="autoSet" style="opacity: 1; display: block">
+                                                    <div class="Ratio" style="display: block">
+                                                        <div class="Ratio-ratio">
+                                                            <div class="Ratio-content">
+                                                                <img
+                                                                        alt="상품 이미지"
+                                                                        class="imgs"
+                                                                        src=""
+                                                                />
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="slick-slide">
+                                                <div class="autoSet" style="opacity: 1; display: block">
+                                                    <div class="Ratio" style="display: block">
+                                                        <div class="Ratio-ratio">
+                                                            <div class="Ratio-content">
+                                                                <img
+                                                                        alt="상품 이미지"
+                                                                        class="imgs"
+                                                                        src=""
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  썸내일 리스트-->
                                         </div>
                                     </div>
+                                    <!--  다음 썸네일로 이동-->
+                                    <img
+                                            class="next slick-arrow slick-next"
+                                            onclick="nextSlide()"
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E"
+                                    >
+                                </div>
+                                <div class="imgPage">
+                                    <!-- 불러와질 썸내일 수에 따라 숫자 변경-->
+                                    <span class="imgPageNum">0 / 2</span>
                                 </div>
                             </div>
-                            <!--                            게시글 내용 보이는 곳-->
+                            <!--  게시글 내용 보이는 곳-->
                             <div class="contents">
                                 <section class="name setHeight">
                                     <div class="set">
@@ -85,7 +101,7 @@
                                         <div class="titleContent">이 곳이 함께해요 내용 보이는 곳</div>
                                     </div>
                                 </section>
-                                <!--                                작성자 이름 표시하는 곳, 팔로우 버튼으로 바꿀예정-->
+                                <!--  작성자 이름 표시하는 곳, 팔로우 버튼으로 바꿀예정-->
                                 <section class="name border">
                                     <div class="colum">
                                         <div class="nameSpace">
@@ -137,7 +153,7 @@
                                 </section>
                             </div>
                         </div>
-                        <!--                        지도 api 구간, 여긴 다시 만들어야함-->
+                        <!--    지도 api 구간, 여긴 다시 만들어야함-->
                         <section class="mapWrapper">
                             <article>
                                 <header class="mtitleWrapper">
@@ -149,7 +165,7 @@
                                     <div class="mapmap">
                                         <div class="mapmap2">
                                             <div class="showMap">
-                                                <!--                                              지도 api들어가는 공간, js로 할당해주기-->
+                                                <!--       지도 api들어가는 공간, js로 할당해주기-->
                                             </div>
                                         </div>
                                         <div class="mapDetailWrapper">
@@ -166,12 +182,12 @@
                         </section>
                     </div>
 
-                    <!--                    화면 고정 되있던 참여하기 버튼 구간-->
+                    <!--    화면 고정 되있던 참여하기 버튼 구간-->
                     <div class="insertButtonWrapper">
                         <div class="buttonWrapper">
                             <button class="insertButton" type="button" onclick="likeOn()">
                                 <p class="xi-heart-o"/>
-<!--                                좋아요 수 표기-->
+                                <!--   좋아요 수 표기-->
                                 <span class="heart2">162</span>
                             </button>
                             <button class="buttonSet1 buttonSet2 buttonSet3">
@@ -182,10 +198,7 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--                    댓글 공간-->
-    <div class="mainWrapper" style="top: 50px">
         <div class="commentsWrapper">
             <div class="autoSet" style="opacity: 1; display: block">
                 <header class="commentsTitle">
@@ -230,7 +243,7 @@
                             처음 배운 쿠킹클래스인데 이해되기 쉽게 잘 가르쳐주셔서 감사합니다.
                         </div>
                         <div class="thumbnail">
-                            <!--                    댓글에 이미지 공간, 이미지 갯수만큼 반복으로 출력하면 될듯 하다-->
+                            <!-- 댓글에 이미지 공간, 이미지 갯수만큼 반복으로 출력하면 될듯 하다-->
                             <div>
                                 <img
                                         class="important"
@@ -253,7 +266,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--                대댓글 공간-->
+                        <!--    대댓글 공간-->
                         <div class="bigCommenterWrapper">
                             <div class="bigCommenterWrapper2">
                                 <div class="bigCommenterImg">
