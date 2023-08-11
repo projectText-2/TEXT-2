@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{fragments/layout}">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{fragments/layout}">
 
 <th:block layout:fragment="head"></th:block>
 
-<meta charset="UTF-8"/>
-<title>함께해요 상세</title>
-
-<link rel="stylesheet" href="../../static/css/inc/reset.css">
-<link rel="stylesheet" href="../../static/css/font/font.css">
-<link rel="stylesheet" href="../../static/css/together/detailPage.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-
-
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script charset="UTF-8" src="../../static/js/together/detailPage.js"></script>
-
-
-
-
-
+    <meta charset="UTF-8">
+    <title>교환해요 상세</title>
+    <link rel="stylesheet" href="../../static/css/trade/tradeDetailPage.css">
+    <link rel="stylesheet" href="../../static/css/inc/reset.css">
+    <link rel="stylesheet" href="../../static/css/font/font.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="../../static/js/trade/tradeDetailPage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
 <body>
 <th:block layout:fragment="header"></th:block>
@@ -53,7 +45,7 @@
                                                                 <img
                                                                         alt="상품 이미지"
                                                                         class="imgs"
-                                                                        src=""
+                                                                        src="../../static/img/trade/tradeImg/교환물건(5).jpg"
                                                                 />
                                                             </div>
                                                         </div>
@@ -68,7 +60,7 @@
                                                                 <img
                                                                         alt="상품 이미지"
                                                                         class="imgs"
-                                                                        src=""
+                                                                        src="../../static/img/trade/tradeImg/교환물건(7).jpg"
                                                                 />
                                                             </div>
                                                         </div>
@@ -97,13 +89,13 @@
                                         <div class="setWebkit">
                                             <hgroup class="titleWrapper">
                                                 <h1 class="title">
-                                                    이곳이 게시글 제목
+                                                    일본에서 만든 양모펠트인형
                                                 </h1>
                                             </hgroup>
                                         </div>
                                     </div>
                                     <div class="titleContentsWrapper">
-                                        <div class="titleContent">이 곳이 함께해요 내용 보이는 곳</div>
+                                        <div class="titleContent">일본에서의 추억이 담겨져있습니다. 세가지 중 원하시는거로 교환 신청합니다</div>
                                     </div>
                                 </section>
                                 <!--  작성자 이름 표시하는 곳, 팔로우 버튼으로 바꿀예정-->
@@ -142,7 +134,7 @@
                                                     <div class="nameTitle2">
                                                         <a href="/hosts/4009"
                                                         ><span class="nt"
-                                                        ><span>프립버스</span
+                                                        ><span>인형수집예술가</span
                                                         ><img
                                                                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-width='1.5' d='M6 3l5 5-5 5'/%3E %3C/svg%3E"
                                                                 alt="arrow-right"/></span
@@ -158,33 +150,8 @@
                                 </section>
                             </div>
                         </div>
-                        <!--    지도 api 구간, 여긴 다시 만들어야함-->
-                        <section class="mapWrapper">
-                            <article>
-                                <header class="mtitleWrapper">
-                                    <hgroup>
-                                        <h2 class="fontSet">모이는 장소</h2>
-                                    </hgroup>
-                                </header>
-                                <div class="mapWrapper">
-                                    <div class="mapmap">
-                                        <div class="mapmap2">
-                                            <div class="showMap">
-                                                <!--       지도 api들어가는 공간, js로 할당해주기-->
-                                            </div>
-                                        </div>
-                                        <div class="mapDetailWrapper">
-                                            <div class="detailWrapper">
-                                                <div class="detail">
-                                                    <strong class="strong">잠실종합운동장역 5번출구</strong
-                                                    ><span class="span">서울 송파구 올림픽로 49</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </section>
+                        <!--    지도 api 구간, 지움-->
+
                     </div>
 
                     <!--    화면 고정 되있던 참여하기 버튼 구간-->
@@ -238,14 +205,14 @@
                                 </div>
                             </div>
                             <div class="commenterName">
-                                <div class="commenterName2">원스톤2</div>
+                                <div class="commenterName2">동그란무좀양말</div>
                                 <div class="whenComment">
                                     <div class="when">2023년 7월 23일 14:41 작성</div>
                                 </div>
                             </div>
                         </div>
                         <div class="comment">
-                            처음 배운 쿠킹클래스인데 이해되기 쉽게 잘 가르쳐주셔서 감사합니다.
+                            제 주전자랑 교환하고싶습니다~!!
                         </div>
                         <div class="thumbnail">
                             <!-- 댓글에 이미지 공간, 이미지 갯수만큼 반복으로 출력하면 될듯 하다-->
@@ -263,7 +230,7 @@
                                                         alt="후기 이미지"
                                                         class="imgSet"
                                                         width="100"
-                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1334875_20230723144142495_d0d1d39b22dac37ac3250614a97e80eb164a6c58969943f791f7103da6f559ce"
+                                                        src="../../static/img/trade/tradeImg/교환물건(6).jpg"
                                                 />
                                             </div>
                                         </div>
@@ -299,7 +266,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="CommenterName">제이몬티베이킹</div>
+                                        <div class="CommenterName">티팟테팔</div>
                                         <div class="commenterWhen">2023-07-25 00:03 작성</div>
                                     </div>
                                 </div>
