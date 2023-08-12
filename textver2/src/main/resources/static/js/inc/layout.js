@@ -50,15 +50,18 @@ $(document).ready(function(){
     });
     $($cateLayerBg).on("click",()=>{
         $cateLayer.fadeOut("fast");
+        $(".nav-cate").removeClass("active")
     });
 
     //footer nav
     $(".foot-nav li").on("click",function () {
-        // let imgAttr = $(this).find("img").attr("src");
-        // let changeImgAttr = $(this).find("img").attr("src").replace(".svg","_on.svg");
-
         $(".foot-nav li").not(this).removeClass("active");
-        // $(this).find("img").attr("src",changeImgAttr);
         $(this).addClass("active");
+    })
+
+    //모바일 카테고리 레이어 오픈
+    $(".nav-cate").on("click",function () {
+        $cateLayer.fadeIn("fast");
+        $cateLayer.addClass("mo-cate");
     })
 });

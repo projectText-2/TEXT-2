@@ -7,7 +7,7 @@
 <th:block layout:fragment="head"></th:block>
 
 <meta charset="UTF-8"/>
-<title>함께해요 상세</title>
+<title>Title</title>
 
 <link rel="stylesheet" href="../../static/css/inc/reset.css">
 <link rel="stylesheet" href="../../static/css/font/font.css">
@@ -17,11 +17,6 @@
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script charset="UTF-8" src="../../static/js/together/detailPage.js"></script>
-
-
-
-
-
 
 <body>
 <th:block layout:fragment="header"></th:block>
@@ -100,6 +95,13 @@
                                                     이곳이 게시글 제목
                                                 </h1>
                                             </hgroup>
+                                            <!--                                            신고 버튼-->
+                                            <div class="reportBtn">
+                                                <button name="reportBtn" type="button"
+                                                        class="reportImg"><img
+                                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
+                                                        alt="신고 아이콘"></button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="titleContentsWrapper">
@@ -185,7 +187,20 @@
                                 </div>
                             </article>
                         </section>
+
+
+                        <div class="moreWrapper">
+                            <button type="button" class="look"><span>더보기</span>
+                                <div class="moreLook"><img
+                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E %3Cpath fill='%23333' fill-rule='evenodd' d='M3.21 5.203c.28-.27.735-.27 1.015 0L8.5 9.329l4.275-4.126c.28-.27.735-.27 1.015 0 .28.27.28.708 0 .979l-4.783 4.615c-.28.27-.734.27-1.014 0L3.21 6.182c-.28-.27-.28-.709 0-.98z' clip-rule='evenodd'/%3E %3C/svg%3E"
+                                        alt="상세정보 arrow icon"></div>
+                            </button>
+                        </div>
+                        <div class="noShow">
+
+                        </div>
                     </div>
+
 
                     <!--    화면 고정 되있던 참여하기 버튼 구간-->
                     <div class="insertButtonWrapper">
@@ -242,35 +257,31 @@
                                 <div class="whenComment">
                                     <div class="when">2023년 7월 23일 14:41 작성</div>
                                 </div>
+
                             </div>
                         </div>
+                        <!-- 댓슬 신고하기 버튼-->
+                        <button class="commentReport option"><img
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
+                                alt="더보기"></button>
+
+                        <!-- 신고 버튼 누르면 보이는 창-->
+                        <div class="noShow controller">
+                            <div>신고하기</div>
+                            <div>대댓글 달기</div>
+
+                        </div>
+
+
                         <div class="comment">
                             처음 배운 쿠킹클래스인데 이해되기 쉽게 잘 가르쳐주셔서 감사합니다.
                         </div>
-                        <div class="thumbnail">
-                            <!-- 댓글에 이미지 공간, 이미지 갯수만큼 반복으로 출력하면 될듯 하다-->
-                            <div>
-                                <img
-                                        class="important"
-                                        width="100"
-                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1334875_20230723144142495_d0d1d39b22dac37ac3250614a97e80eb164a6c58969943f791f7103da6f559ce"
-                                />
-                                <div class="autoSet" style="opacity: 1; display: block">
-                                    <div class="Ratio" style="display: block">
-                                        <div class="Ratio-ratio">
-                                            <div class="Ratio-content">
-                                                <img
-                                                        alt="후기 이미지"
-                                                        class="imgSet"
-                                                        width="100"
-                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1334875_20230723144142495_d0d1d39b22dac37ac3250614a97e80eb164a6c58969943f791f7103da6f559ce"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!--    대댓글 입력 값 전송용 form 태그-->
+                        <form class="commentForm noShow">
+                            <div class="positionF">
+                                <input class="puter" value=""></div>
+                            <button type="submit" class="submitBu">전송</button>
+                        </form>
                         <!--    대댓글 공간-->
                         <div class="bigCommenterWrapper">
                             <div class="bigCommenterWrapper2">
@@ -303,10 +314,22 @@
                                         <div class="commenterWhen">2023-07-25 00:03 작성</div>
                                     </div>
                                 </div>
-                                <div>
+                                <!--  댓글 신고하기 버튼-->
+                                <button class="commentReport option"><img
+                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
+                                        alt="더보기"></button>
+
+
+                                <div class="fontSize">
                                     안녕하세요^^ 즐겁게 참여해주시고 멋진 사진올려주셔서 감사합니다 늘 좋은
                                     수업되도록 하겠습니다 :)
                                 </div>
+                                <!--    대대댓글 입력 값 전송용 form 태그-->
+                                <form class="commentForm noShow">
+                                    <div class="positionF">
+                                        <input class="puter" value=""></div>
+                                    <button type="submit" class="submitBu">전송</button>
+                                </form>
                             </div>
                         </div>
                     </div>
