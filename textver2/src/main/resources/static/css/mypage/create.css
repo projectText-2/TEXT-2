@@ -188,6 +188,17 @@ hr{
     background-clip: border-box;
     border-radius: .6rem;
 }
+.imgthum {
+    background-color: transparent;
+    border: 1px dashed rgb(42, 145, 253);
+    position: relative;
+    align-items: center;
+    min-height: 15rem;
+    padding: 0;
+    max-width: 260px;
+    width: 100%;
+    text-align: center;
+}
 .imgdiv {
     background-color: transparent;
     border: 1px dashed #bfbfbf;
@@ -204,6 +215,7 @@ hr{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: 100%;
 }
 .text-center {
     text-align: center!important;
@@ -223,3 +235,133 @@ img, svg {
     transform: translate(-50%, -50%);
 }
 label { display:inline-block; width:260px; }
+.import{
+    font-family: Noto Sans CJK KR;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -.5px;
+    text-align: left;
+    color: rgb(42, 145, 253);
+}
+.delete{
+    z-index: 1;
+    position: absolute;
+    top: 1%;
+    right: 5.9%;
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+
+button {
+	appearance: auto;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.subbut{
+    background-color: #fff!important;
+    text-align: right!important;
+    padding-left: 1rem!important;
+    padding-right: 1rem!important;
+    padding: .5rem!important;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    border-top: 1px solid #ddd!important;
+}
+
+.cancel{
+    margin-right: .5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #ddd;
+    border-width: 1px;
+    padding-inline: 2rem;
+    position: relative;
+    text-transform: none;
+    transition: all .15s ease;
+    letter-spacing: -.025em;
+    font-size: .8125rem;
+    will-change: transform;
+    color: #333;
+    background-color: transparent;
+    background-image: none;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .875rem .875rem;
+    line-height: 1.5;
+    border-radius: .375rem;
+    font-family: inherit;
+	width: 88px;
+    border: 1px solid #ddd;
+}
+.submit{
+	cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2rem;
+    position: relative;
+    text-transform: none;
+    transition: all .15s ease;
+    letter-spacing: -.025em;
+    font-size: .8125rem;
+    will-change: transform;
+    color: #fff;
+    background-color: #7a29fa;
+    border-color: #7a29fa;
+    box-shadow: none;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .875rem .875rem;
+    line-height: 1.5;
+    border-radius: .375rem;
+    -webkit-appearance: button;
+    overflow: visible;
+	width: 88px;
+}

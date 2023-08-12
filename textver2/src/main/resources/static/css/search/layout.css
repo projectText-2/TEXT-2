@@ -15,12 +15,20 @@
 .result .cate-arrow{transition: all 0.2s}
 .result .cate-arrow.active{transform: rotate(180deg);}
 
+/* 검색 하위 메인 필터 */
+.sub-main-filer{overflow-x: scroll; -ms-overflow-style: none; /* 인터넷 익스플로러 */ scrollbar-width: none; /* 파이어폭스 */}
+.sub-main-filer::-webkit-scrollbar{display: none; /* 크롬, 사파리, 오페라, 엣지 */}
+.sub-main-filer ul{display: flex;width: 100%; margin-bottom: 10px;}
+.sub-main-filer ul li button{padding: 6px 10px; font-size: 12px; font-weight: 500; line-height: 14px; border-radius: 5px; color: #333; background-color: rgb(245, 245, 245);}
+.sub-main-filer ul li.active button{color: #21BAF3; background-color: #F2F8FB;}
+.sub-main-filer ul li + li{margin-left: 10px;}
+
 /* 검색 하위 필터 */
 .sub-filter{overflow-x: scroll; -ms-overflow-style: none; /* 인터넷 익스플로러 */ scrollbar-width: none; /* 파이어폭스 */}
 .sub-filter::-webkit-scrollbar{display: none; /* 크롬, 사파리, 오페라, 엣지 */}
 .sub-filter ul{display: flex; padding-bottom: 25px; width: max-content;}
-.sub-filter ul li button{font-size: 12px; margin-right: 10px;}
-.sub-filter ul li.active button{color: #21BAF3; font-weight: bold}
+.sub-filter ul li button{font-size: 12px; margin-right: 10px;padding: 6px 10px; border-radius: 5px;}
+.sub-filter ul li.active button{color: #ffb029; font-weight: bold; background: #fffbf4;}
 
 /* 좋아요, 댓글, 인포 */
 .info-wrap{margin-bottom: 20px;}

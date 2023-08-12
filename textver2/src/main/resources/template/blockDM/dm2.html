@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DM 디엠</title>
+    <link rel="stylesheet" href="../../static/css/blockDM/dm2.css">
+    <script src="../../static/js/blockDM/dm2.js"></script>
+</head>
+<body>
+    <div id="Chat">
+        <div id="ChatWindow" class="classChatWindow" tabindex="0" style="left: auto; right: 10px; bottom: 70px;">
+            <div id="ViewerContainer">
+                <span id="ViewerClose" tabindex="0" aria-label="이미지 상세보기 닫기 버튼"></span>
+            </div>
+            <div class="classRankingDotCom1">
+                <div class="classRankingDotCom2">
+                    <h2 class="classRankingDotCom3">디엠</h2>
+                </div>
+                <div class="classRankingDotCom4" data-cy="unionScroll" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
+                        
+                        <!-- <div class="classRankingDotCom5">
+                            <div class="classRankingDotCom6">
+                                <div>
+                                    <div class="classRankingDotCom7">
+                                        <div class="classRankingDotCom8">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" class="svg-inline--fa fa-clock " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor" d="M232 120C232 106.7 242.7 96 256 96C269.3 96 280 106.7 280 120V243.2L365.3 300C376.3 307.4 379.3 322.3 371.1 333.3C364.6 344.3 349.7 347.3 338.7 339.1L242.7 275.1C236 271.5 232 264 232 255.1L232 120zM256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0zM48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48C141.1 48 48 141.1 48 256z"></path>
+                                            </svg>
+                                        </div>
+                                        <aside class="workTime1">
+                                            <div class="workTime2">
+                                                <span class="workTime3">
+                                                    <span>
+                                                        <div>
+                                                            <p class="text">평일: 09:00~21:00 </p>
+                                                            <p class="text">토요일: 09:00~15:00 </p>
+                                                            <p class="text">일요일: 13:00~21:00 </p>
+                                                        </div>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </aside>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="consult1">
+                                        <aside class="consult2">
+                                            <div class="consult3">
+                                                <span class="consult4">
+                                                    <span>이전 상담</span>
+                                                </span>
+                                            </div>
+                                        </aside>
+                                        <svg viewBox="0 0 14 14" width="14" height="14" aria-label="arrow_right">
+                                            <title>이전 상담</title>
+                                            <path d="M5.17157288,2.17157288 C5.56209717,1.78104858 6.19526215,1.78104858 6.58578644,2.17157288 L6.58578644,2.17157288 L10.8284271,6.41421356 L10.9116157,6.5084209 C11.2166406,6.90071211 11.1889111,7.46794316 10.8284271,7.82842712 L10.8284271,7.82842712 L6.58578644,12.0710678 L6.4915791,12.1542564 C6.09928789,12.4592813 5.53205684,12.4315518 5.17157288,12.0710678 L5.17157288,12.0710678 L5.08838427,11.9768605 C4.78335938,11.5845693 4.81108891,11.0173382 5.17157288,10.6568542 L5.17157288,10.6568542 L8.70732034,7.12067966 L5.17157288,3.58578644 C4.78104858,3.19526215 4.78104858,2.56209717 5.17157288,2.17157288 Z" class="css-0"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="helpdesk1">
+                            <!-- <h4 class="helpdesk2">자주 묻는 질문</h4>
+                            <div class="helpdesk3">
+                                <svg viewBox="0 0 14 14" width="14" height="300" aria-label="search">
+                                    <path d="M5.5,0 C8.53756612,0 11,2.46243388 11,5.5 C11,6.63600034 10.6555945,7.69156047 10.0655024,8.5679617 L13.4041631,11.9071068 C13.7165825,12.2195262 13.7165825,12.7260582 13.4041631,13.0384776 L12.8384776,13.6041631 C12.5260582,13.9165825 12.0195262,13.9165825 11.7071068,13.6041631 L8.32349844,10.2209167 C7.49813543,10.7156148 6.53227857,11 5.5,11 C2.46243388,11 0,8.53756612 0,5.5 C0,2.46243388 2.46243388,0 5.5,0 Z M5.5,1.4 C3.23563253,1.4 1.4,3.23563253 1.4,5.5 C1.4,7.76436747 3.23563253,9.6 5.5,9.6 C7.76436747,9.6 9.6,7.76436747 9.6,5.5 C9.6,3.23563253 7.76436747,1.4 5.5,1.4 Z" class="css-0"></path>
+                                </svg>
+                                <div class="helpdesk4">
+                                    <label for="helpdesk" class="css-1ddfmgq">검색어</label>
+                                    <div class="helpdesk5">
+                                        <input id="helpdesk" type="text" placeholder="검색할 단어로 입력해 주세요." class="css-4txyy3" value="">
+                                    </div>
+                                </div>
+                            </div> -->     
+                            <ul class="helpdesk6">
+                                <li class="helpdesk7" tabindex="0" role="link">테스트1</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트2</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트3</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트4</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트5</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트6</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트7</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트8</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트9</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트10</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트11</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트12</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트13</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트14</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트15</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트16</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트17</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트18</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트19</li>
+                                <li class="helpdesk7" tabindex="0" role="link">테스트20</li>
+                            </ul>                       
+                        </div>
+                    </div>
+                    <div style="position: absolute; height: 6px; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;">
+                        <div style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 0px;"></div>
+                    </div>
+                    <div style="position: absolute; width: 6px; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;">
+                        <div style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+            <div class="toastify"></div>
+        </div>
+        <div class="close1" style="left: auto; right: 10px; bottom: 10px;">
+            <div tabindex="0" role="button" aria-label="상담하기 닫기" style="position: relative;">
+                <div class="close2">
+                    <div class="close3">1</div>
+                </div>
+                <div class="close4">
+                    <svg viewBox="0 0 14 14" width="14" height="14" aria-label="arrow_down">
+                        <title>닫기 버튼</title>
+                        <path d="M3.58578644,4.41421356 L7.12067966,7.94996103 L10.6568542,4.41421356 C11.0173382,4.0537296 11.5845693,4.02600007 11.9768605,4.33102496 L12.0710678,4.41421356 C12.4315518,4.77469752 12.4592813,5.34192858 12.1542564,5.73421979 L12.0710678,5.82842712 L7.82842712,10.0710678 C7.46794316,10.4315518 6.90071211,10.4592813 6.5084209,10.1542564 L6.41421356,10.0710678 L2.17157288,5.82842712 C1.78104858,5.43790283 1.78104858,4.80473785 2.17157288,4.41421356 C2.56209717,4.02368927 3.19526215,4.02368927 3.58578644,4.41421356 Z" class="css-0"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

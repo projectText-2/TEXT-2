@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script charset="UTF-8" src="../../static/js/mypage/alarm.js"></script>
+    <link rel='stylesheet' type='text/css' href='../../static/css/inc/reset.css'>
+    <link rel='stylesheet' type='text/css' href='../../static/css/font/font.css'>
+    <link rel="stylesheet" type='text/css' href="../../static/css/mypage/alarm.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <title>alarm</title>
+</head>
+<body>
+<div class="main">
+    <h1 font-size="24px" class="mainh1">공지사항</h1>
+    <div class="maindiv" id="maindiv">
+        <span class="select" id="feed" onclick="select('feed')">피드</span>
+        <span class="other" id="together" onclick="select('together')">함께해요</span>
+        <span class="other" id="mytogether" onclick="select('mytogether')">나의 함께해요</span>
+        <span class="other" id="trade" onclick="select('trade')">교환해요</span>
+        <span class="other" id="mytrade" onclick="select('mytrade')">나의 교환해요</span>
+    </div>
+    <div class="listdiv">
+        <ul class="listul">
+            <li>
+                <div class="lidiv" onclick="check()">
+                    <div class="img"></div>
+                    <div class="lititle">광복절(8/15) 고객센터 운영시간 안내
+                    </div>
+                    <div class="time">2023-08-08 16:05</div>
+                </div>
+            </li>
+            <li>
+                <div class="lidiv">
+                    <div class="lisort">피드</div>
+                    <div class="lititle">현충일(6/6) 고객센터 운영시간 안내</div>
+                    <div class="time">2023-06-01 08:31</div>
+                </div>
+            </li>
+        </ul>
+        <footer>
+
+        </footer>
+    </div>
+</div>
+</body>
+</html>
