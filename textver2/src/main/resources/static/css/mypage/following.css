@@ -225,7 +225,6 @@ li, ul{
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-decoration: none;
     word-break: break-all;
     overflow-wrap: break-word;
     -webkit-line-clamp: 1;
