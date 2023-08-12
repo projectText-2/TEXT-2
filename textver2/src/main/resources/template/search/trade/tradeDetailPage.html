@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-xmlns="http://www.w3.org/1999/xhtml"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="~{fragments/layout}">
+
 
 <th:block layout:fragment="head"></th:block>
 
@@ -16,6 +14,7 @@ layout:decorate="~{fragments/layout}">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
 <body>
+<header th:replace = "~{header.html}::#header"></header>
 <th:block layout:fragment="header"></th:block>
 <div id="app" layout:fragment="content" class="content">
     <div class="mainWrapper">
@@ -163,7 +162,7 @@ layout:decorate="~{fragments/layout}">
                                 <span class="heart2">162</span>
                             </button>
                             <button class="buttonSet1 buttonSet2 buttonSet3">
-                                <div class="clickButton">참여하기</div>
+                                <div class="clickButton">교환하기</div>
                             </button>
                         </div>
                     </div>
@@ -212,10 +211,11 @@ layout:decorate="~{fragments/layout}">
                             </div>
                         </div>
                         <div class="comment">
-                            제 주전자랑 교환하고싶습니다~!!
+                            정말 멋진 작품이네요~ 탐나네요~
                         </div>
                         <div class="thumbnail">
                             <!-- 댓글에 이미지 공간, 이미지 갯수만큼 반복으로 출력하면 될듯 하다-->
+<<<<<<< HEAD:textver2/src/main/resources/template/search/trade/tradeDetailPage.html
                             <div>
                                 <img
                                         class="important"
@@ -237,6 +237,9 @@ layout:decorate="~{fragments/layout}">
                                     </div>
                                 </div>
                             </div>
+=======
+
+>>>>>>> yoondam:textver2/src/main/resources/template/trade/tradeDetailPage.html
                         </div>
                         <!--    대댓글 공간-->
                         <div class="bigCommenterWrapper">
@@ -271,8 +274,7 @@ layout:decorate="~{fragments/layout}">
                                     </div>
                                 </div>
                                 <div>
-                                    안녕하세요^^ 즐겁게 참여해주시고 멋진 사진올려주셔서 감사합니다 늘 좋은
-                                    수업되도록 하겠습니다 :)
+                                    ㅎㅎ
                                 </div>
                             </div>
                         </div>

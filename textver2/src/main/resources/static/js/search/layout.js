@@ -14,3 +14,19 @@ $cateFilterListBtn.on("click",function () {
     let $listVal = $(this).text();
     $cateNameArea.text($listVal);
 })
+
+/* 서브필터 */
+const $subFilterLi = $(".sub-filter li");
+
+$subFilterLi.on("click",function(){
+    $subFilterLi.not(this).removeClass("active")
+    $(this).addClass("active");
+})
+
+/* 메인서브필터 */
+const $mainSubFilterLi = $(".sub-main-filer li");
+
+$mainSubFilterLi.on("click",function(){
+    $mainSubFilterLi.not(this).removeClass("active")
+    $(this).addClass("active");
+})
