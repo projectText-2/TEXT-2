@@ -1,76 +1,124 @@
-button,
-html [type='button'],
-[type='reset'],
-[type='submit'] {
-    -webkit-appearance: button;
-    appearance: button;
+.main {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
 }
-img {
-    border-style: none;
+.mainh1 {
+    margin: 30px 0px 20px;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: bold;
 }
-::selection {
-    background-color: #b3d4fc;
-    color: #000000;
-    text-shadow: none;
+.maindiv {
+    /*   border-bottom: 1px solid rgb(238, 238, 238); */
+    padding: 20px 0px;
+    white-space: nowrap;
+    overflow: auto;
 }
-*,
-::before,
-::after {
-    background-repeat: no-repeat;
-    box-sizing: inherit;
+.maindiv > span {
+    margin-right: 20px;
 }
-div {
-    display: block;
-}
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-* {
-    outline: none;
-    font-family: inherit;
-}
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-button {
+.select {
+    color: #21BAF3;
     cursor: pointer;
 }
-a,
-area,
-button,
-input,
-label,
-select,
-textarea,
-[tabindex] {
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
+.other {
+    color: black;
+    cursor: pointer;
 }
-button,
-select {
-    text-transform: none;
+.listdiv {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+    opacity: 1;
+    display: block;
 }
-button,
-input {
-    overflow: visible;
+.listul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
 }
-button,
-input,
-select,
-textarea {
-    background-color: transparent;
-    border-style: none;
-    color: inherit;
-    font-size: 1em;
-    margin: 0;
+.lidiv {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 60px;
+    line-height: 24px;
+    padding: 18px 0px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(230, 230, 230);
 }
-/* ----------------------------------------------------------------------------------------------------------- */
+.img {
+    margin-left: 0px;
+    margin-right: 21px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+.img.enroll{
+    background-color: #ffb029;
+
+}
+.img.accept{
+    background-color: #21baf3;
+}
+.img.fail{
+    background-color: #939393;
+}
+
+.img.no{
+    margin-right: 38px;
+
+    background-color: #939393;
+}
+
+
+
+
+
+.lititle {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+.check {
+    margin-left: 5px;
+    color: rgb(255, 102, 102);
+    font-weight: bold;
+}
+.time {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    font-weight: normal;
+}
+body {
+    font-size: 14px;
+}
+.tab-con>div{display: none}
+
+
+
+/* 나의 작성글 ----------------------------------------------------------------------------*/
 #app {
     background-color: white;
     min-height: 100%;
@@ -90,27 +138,6 @@ textarea {
     margin: 0px auto;
 }
 
-/* 피드헤더 (피드라고 써져있는부분) */
-.SocialFeedPage-Header {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid rgb(238, 238, 238);
-}
-.SocialFeedPage-Title {
-    color: rgb(51, 61, 75);
-    font-weight: bold;
-    font-size: 24px;
-}
-.SocialFeedPage-button {
-    cursor: pointer;
-    vertical-align: super;
-}
-
-/* 피드 contents ----------------------------------------------------------------------------------------- */
 .SocialFeedPage-Content {
     width: auto;
     height: auto;
@@ -135,75 +162,16 @@ textarea {
 
 
 
-/* 1. 피드 contents - 프로필 이름, 사진, 시간 */
-.FeedList-ProfileWrapper {
-    margin-bottom: 15px;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-}
-.UserProfileWrapper {
-    display: flex;
-}
+/* 수락 신청완료 인원마감 필터 ----------------*/
+.sub-main-filer{overflow-x: scroll; -ms-overflow-style: none; /* 인터넷 익스플로러 */ scrollbar-width: none; /* 파이어폭스 */}
+.sub-main-filer::-webkit-scrollbar{display: none; /* 크롬, 사파리, 오페라, 엣지 */}
+.sub-main-filer ul{display: flex;width: 100%; margin-bottom: 10px;}
+.sub-main-filer ul li button{padding: 6px 10px; font-size: 12px; font-weight: 500; line-height: 14px; border-radius: 5px; color: #333; background-color: rgb(245, 245, 245);}
+.sub-main-filer ul li.active button{color: #21BAF3; background-color: #F2F8FB;}
+.sub-main-filer ul li + li{margin-left: 10px;}
 
-/* 1-1. 프로필이미지 */
-.ProfileImageWrapper {
-    width: 36px;
-    height: 36px;
-    margin-right: 10px;
-    margin-top: 10%;
-}
-.ProfileImage-Wrapper {
-    min-height: 1px;
-}
-.ImageLoader {
-    display: none !important;
-}
+/* 밑에 피드리스트 양식----------------------- */
 
-.Fade-Wrapper {
-    width: auto;
-    height: auto;
-    transition: opacity 200ms ease-in-out 0s;
-    min-width: 0px;
-    min-height: 1px;
-}
-
-/* 사진 크기 설정 */
-.Fade-Wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.StyledImage {
-    display: initial;
-    border-radius: 36px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-/* 이 아래는 필요한지 잘 모르겠음 */
-.FloatingButtonWrapper {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-}
-.Footer-Wrapper {
-    padding: 40px 20px 96px;
-    background-color: rgb(248, 248, 248);
-}
-
-.FeedImage-wrapper2 {
-    max-width: 213px;
-    position: relative;
-    align-items: center;
-}
-
-/* feed 리스트 -------------------------------------------------------------*/
 .post .user-wrap {
     width: 100%;
     height: auto;
@@ -305,9 +273,9 @@ textarea {
     margin-bottom: 20px;
 }
 .post .con-wrap .tit {
-    font-weight: 600;
-    letter-spacing: -1px;
-    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-bottom: 14px;
 }
 .post .con-wrap .content {
     font-size: 12px;

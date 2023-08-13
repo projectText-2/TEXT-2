@@ -11,7 +11,7 @@ function heart() {
 
         $('.heart').addClass("heartOn");
         $('.heart').text('팔로우 중');
-    }else {
+    } else {
         fStatus = 0;
 
         $('.heart').removeClass("heartOn");
@@ -22,13 +22,12 @@ function heart() {
 function likeOn() {
     if (like == 0) {
         like = 1;
-        $('.xi-heart-o').attr("class","xi-heart");
+        $('.xi-heart-o').attr("class", "xi-heart");
     } else {
         like = 0;
-        $('.xi-heart').attr("class","xi-heart-o");
+        $('.xi-heart').attr("class", "xi-heart-o");
     }
 }
-
 
 
 // /////////////////////////////////////////////////
@@ -41,8 +40,15 @@ $(document).ready(function () {
     const bannerWrap = document.querySelector('.slick-track');
     const banners = document.querySelectorAll('.imgs');
     banners.forEach((banner, i) => {
-        banner.src=`../../static/img/togetherImg/${i + 1}.jpg`;
+        banner.src = `../../static/img/togetherImg/${i + 1}.jpg`;
     });
+//    모달 가리기
+    $(".modalShow").hide();
+    $(".opacity").hide();
+    // 신고하기 누르면 보이게 만들기
+    // $(".noShow2").hide();
+
+    // $(".commentForm").hide();
 });
 
 //이전 슬라이드
@@ -53,8 +59,8 @@ function prevSlide() {
     var currentIndex = 0; //현재 나타난 슬라이드의 인덱스 변수
 
     //반복문으로 현재 active클래스를 가진 div를 찾아 index 저장
-    $(".slick-slide").each(function(index,item){
-        if($(this).hasClass("active")) {
+    $(".slick-slide").each(function (index, item) {
+        if ($(this).hasClass("active")) {
             currentIndex = index;
         }
 
@@ -63,12 +69,12 @@ function prevSlide() {
     //새롭게 나타낼 div의 index
     var newIndex = 0;
 
-    if(currentIndex <= 0) {
+    if (currentIndex <= 0) {
         //현재 슬라이드의 index가 0인 경우 마지막 슬라이드로 보냄(무한반복)
-        newIndex = allSlide.length-1;
+        newIndex = allSlide.length - 1;
     } else {
         //현재 슬라이드의 index에서 한 칸 만큼 뒤로 간 index 지정
-        newIndex = currentIndex-1;
+        newIndex = currentIndex - 1;
     }
 
     //모든 div에서 active 클래스 제거
@@ -87,8 +93,8 @@ function nextSlide() {
     var allSlide = $(".slick-slide");
     var currentIndex = 0;
 
-    $(".slick-slide").each(function(index,item){
-        if($(this).hasClass("active")) {
+    $(".slick-slide").each(function (index, item) {
+        if ($(this).hasClass("active")) {
             currentIndex = index;
         }
 
@@ -96,12 +102,12 @@ function nextSlide() {
 
     var newIndex = 0;
 
-    if(currentIndex >= allSlide.length-1) {
+    if (currentIndex >= allSlide.length - 1) {
         //현재 슬라이드 index가 마지막 순서면 0번째로 보냄(무한반복)
         newIndex = 0;
     } else {
         //현재 슬라이드의 index에서 한 칸 만큼 앞으로 간 index 지정
-        newIndex = currentIndex+1;
+        newIndex = currentIndex + 1;
     }
 
     $(".slick-slide").removeClass("active");
@@ -110,4 +116,28 @@ function nextSlide() {
 
 }
 
+///////////////////////////////////////////////////////////////////
 
+function modalShow() {
+    if ($(".opacity").css("display") == "none") {
+        $(".opacity").show();
+    } else {
+        noShow();
+    }
+}
+
+
+function noShow() {
+    $(".opacity").hide();
+}
+
+function report() {
+    if ($(".opacity").css("display") == "none") {
+        $(".opacity").show();
+    }
+}
+//자신 하위의 input이 보이게 만들기
+function showInp(el) {
+    console.log($(el));
+    $(el).next().removeClass('noshow').addClass('commentForm');
+}

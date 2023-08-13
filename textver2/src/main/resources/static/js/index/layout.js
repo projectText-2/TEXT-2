@@ -30,8 +30,8 @@ $totalCount.text($galleryLi.length);
     $currCount.text(count + 1);
  })
 
- $btnPrev.on("click",function()if(count <= 0) count = $galleryLi.length;{
-
+ $btnPrev.on("click",function(){
+    if(count <= 0) count = $galleryLi.length;
     -- count;
     const $gap = $galleryLi.eq(1).offset().left - $galleryLi.eq(0).offset().left;
     const $goto = (-$gap * count) + "px";

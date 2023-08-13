@@ -1,38 +1,4 @@
-// function feed() {
-//     document.getElementById("feed").className = "select";
-//     document.getElementById("together").className = "other";
-//     document.getElementById("mytogether").className = "other";
-//     document.getElementById("trade").className = "other";
-//     document.getElementById("mytrade").className = "other";
-// }
-// function together() {
-//     document.getElementById("feed").className = "other";
-//     document.getElementById("together").className = "select";
-//     document.getElementById("mytogether").className = "other";
-//     document.getElementById("trade").className = "other";
-//     document.getElementById("mytrade").className = "other";
-// }
-// function mytogether() {
-//     document.getElementById("feed").className = "other";
-//     document.getElementById("together").className = "other";
-//     document.getElementById("mytogether").className = "select";
-//     document.getElementById("trade").className = "other";
-//     document.getElementById("mytrade").className = "other";
-// }
-// function trade() {
-//     document.getElementById("feed").className = "other";
-//     document.getElementById("together").className = "other";
-//     document.getElementById("mytogether").className = "other";
-//     document.getElementById("trade").className = "select";
-//     document.getElementById("mytrade").className = "other";
-// }
-// function mytrade() {
-//     document.getElementById("feed").className = "other";
-//     document.getElementById("together").className = "other";
-//     document.getElementById("mytogether").className = "other";
-//     document.getElementById("trade").className = "other";
-//     document.getElementById("mytrade").className = "select";
-// }
+
 
 function select(id) {
     var class_id = $('.select').attr('id');

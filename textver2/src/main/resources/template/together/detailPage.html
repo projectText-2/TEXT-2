@@ -95,12 +95,16 @@
                                                     이곳이 게시글 제목
                                                 </h1>
                                             </hgroup>
-                                            <!--                                            신고 버튼-->
-                                            <div class="reportBtn">
+                                            <!-- 신고 버튼-->
+                                            <div class="reportBtn"
+                                                 onclick="report()">
                                                 <button name="reportBtn" type="button"
-                                                        class="reportImg"><img
+                                                        class="reportImg"
+                                                ><img
                                                         src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
-                                                        alt="신고 아이콘"></button>
+                                                        alt="신고 아이콘"
+                                                        onclick="report()"
+                                                ></button>
                                             </div>
                                         </div>
                                     </div>
@@ -165,7 +169,7 @@
                             <article>
                                 <header class="mtitleWrapper">
                                     <hgroup>
-                                        <h2 class="fontSet">모이는 장소</h2>
+                                        <h2 class="fontSet" style="margin-top: 30px">모이는 장소</h2>
                                     </hgroup>
                                 </header>
                                 <div class="mapWrapper">
@@ -196,7 +200,7 @@
                                         alt="상세정보 arrow icon"></div>
                             </button>
                         </div>
-                        <div class="noShow">
+                        <div class="moreNoShow">
 
                         </div>
                     </div>
@@ -260,28 +264,24 @@
 
                             </div>
                         </div>
-                        <!-- 댓슬 신고하기 버튼-->
-                        <button class="commentReport option"><img
-                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
-                                alt="더보기"></button>
-
-                        <!-- 신고 버튼 누르면 보이는 창-->
-                        <div class="noShow controller">
-                            <div>신고하기</div>
-                            <div>대댓글 달기</div>
-
-                        </div>
-
 
                         <div class="comment">
                             처음 배운 쿠킹클래스인데 이해되기 쉽게 잘 가르쳐주셔서 감사합니다.
                         </div>
-                        <!--    대댓글 입력 값 전송용 form 태그-->
-                        <form class="commentForm noShow">
-                            <div class="positionF">
-                                <input class="puter" value=""></div>
-                            <button type="submit" class="submitBu">전송</button>
-                        </form>
+                        <!-- 기타 버튼-->
+                        <div class="controllerWrap">
+                            <div class="controller" onclick="report()"><span>신고하기</span></div>
+                            <div class="controller" onclick="showInp(this)"><span>대댓글 달기</span></div>
+
+
+                            <!--    대대 입댓글력 값 전송용 form 태그-->
+                            <form class="noshow" value="sdf">
+                                <div class="positionF">
+                                    <input class="puter" value=""></div>
+                                <button type="submit" class="submitBu">전송</button>
+                            </form>
+                        </div>
+
                         <!--    대댓글 공간-->
                         <div class="bigCommenterWrapper">
                             <div class="bigCommenterWrapper2">
@@ -314,26 +314,83 @@
                                         <div class="commenterWhen">2023-07-25 00:03 작성</div>
                                     </div>
                                 </div>
-                                <!--  댓글 신고하기 버튼-->
-                                <button class="commentReport option"><img
-                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
-                                        alt="더보기"></button>
-
 
                                 <div class="fontSize">
                                     안녕하세요^^ 즐겁게 참여해주시고 멋진 사진올려주셔서 감사합니다 늘 좋은
                                     수업되도록 하겠습니다 :)
                                 </div>
-                                <!--    대대댓글 입력 값 전송용 form 태그-->
-                                <form class="commentForm noShow">
-                                    <div class="positionF">
-                                        <input class="puter" value=""></div>
-                                    <button type="submit" class="submitBu">전송</button>
-                                </form>
+
+                                <!-- 기타 버튼-->
+                                <div class="controllerWrap">
+                                    <div class="controller" onclick="report()"><span>신고하기</span></div>
+                                    <div class="controller" onclick="showInp(this)"><span>대댓글 달기</span></div>
+
+
+                                    <!--    대대댓글 입력 값 전송용 form 태그-->
+                                    <form class="noshow" value="sdf">
+                                        <div class="positionF">
+                                            <input class="puter" value=""></div>
+                                        <button type="submit" class="submitBu">전송</button>
+                                    </form>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalWrapper">
+        <div class="modalShow">
+            <div class="verCenter">
+                <div class="forCenter">
+                    <div class="modalContents">
+                        <div class="overhide">
+                            <div class="reportWrap">
+                                <div style="margin-bottom: 15px">
+                                    <span onclick="modalShow()">신고하기</span>
+                                </div>
+                                <!-- 게시물 주인일 경우에만 삭제 보이게 만들기 -->
+                                <div><span>게시물 삭제</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        모달을 여기에 띄우기-->
+        <label class="opacity">
+            <label class="contentsWrp">
+                <!--닫기 버튼-->
+                <button name="CloseBtn" type="button" onclick="noShow()">
+                    <img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='nonzero'%3E %3Cpath d='M0 0h24v24H0z'/%3E %3Cpath stroke='%23000' stroke-width='2' d='M7.05 7.05l9.9 9.9M16.95 7.05l-9.9 9.9'/%3E %3C/g%3E %3C/svg%3E"
+                            alt="닫기 버튼"
+                            style="width: 30px; padding-top: 10px"
+                    />
+                </button>
+
+
+                <div>
+                    <input name="reportBtn" type="checkbox" class="noShow2 disD" id="1">
+                    <label for="1" class="reportText">음란물</label>
+                    </input>
+                    <input name="reportBtn" type="checkbox" class="noShow2 disD" id="2">
+                    <label for="2" class="reportText">비방•욕설글</label>
+                    </input>
+                    <input name="reportBtn" type="checkbox" class="noShow2 disD" id="3">
+                    <label for="3" class="reportText">기타</label>
+                    </input>
+                </div>
+
+                <!--    대대 입댓글력 값 전송용 form 태그-->
+                <form class="">
+                    <div class="position7">
+                        <input class="puter"></div>
+                    <button type="submit" class="submitBu2">전송</button>
+                </form>
+
             </div>
         </div>
     </div>

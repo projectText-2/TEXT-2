@@ -1,25 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>교환해요 작성페이지~~~~~~~~</title>
+
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type='text/css' href="../../static/css/mypage/create.css">
+    <link rel="stylesheet" type='text/css' href="../../static/css/trade/tradeCreate.css">
     <link rel='stylesheet' type='text/css' href='../../static/css/inc/reset.css'>
     <link rel='stylesheet' type='text/css' href='../../static/css/font/font.css'>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="../../static/js/mypage/create.js"></script>
+    <script src="../../static/js/trade/tradeCreate.js" defer></script>
 
-    <title>Document</title>
 </head>
 <body>
 <form action="" method="post" enctype="multipart/form-data">
     <div>
-        <div class="top">함께해요 작성</div>
+        <div class="top">교환해요 작성</div>
         <div class="side">
             <form>
-                <div class="all">
+                <div class="allContent">
                     <div>
                         <div class="title">
                             <div class="title1">
@@ -41,6 +43,29 @@
                                 </div>
                             </div>
                         </div>
+                        <hr>
+                        <!--태그-->
+                        <div class="title">
+                        <div class="title1">
+                            <div class="title2"><div class="title3" style="font-size: 0.9rem;">태그</div></div>
+                        <div class="sub-main-filer">
+                            <ul>
+                                <li class="all"><button type="button">의류</button></li>
+                                <li><button type="button">잡화</button></li>
+                                <li><button type="button">음식</button></li>
+                                <li><button type="button">전자기기</button></li>
+                                <li><button type="button">애완용품</button></li>
+                                <li><button type="button">출산/육아</button></li>
+                                <li><button type="button">굿즈/피규어</button></li>
+                                <li><button type="button">홈/생활용품</button></li>
+                                <li><button type="button">기타</button></li>
+                            </ul>
+                        </div>
+
+                        </div>
+                        </div>
+
+
                         <hr>
                         <div class="title">
                             <div class="title1">
@@ -153,27 +178,6 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="title">
-                            <div class="title1">
-                                <div class="title2">
-                                    <div class="title3" style="font-size: 0.9rem;">함께할<br/>위치</div>
-                                </div>
-                                <div class="titlediv">
-                                    <div>
-                                        <span>
-                                            <fieldset class="" id="">
-                                                <div>
-                                                    <div class="">
-                                                    <input type="text" placeholder="제목을 입력해주세요." class="titleinp" valid="true">
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                        </span>
-                                    </div>
-                                    <div id="map" style="width: 100%; margin-top: 2%; height: 254px; background-color: antiquewhite"></div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </form>
@@ -185,9 +189,4 @@
     </div>
 </form>
 </body>
-<script
-        type="text/javascript"
-        src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=09118387dc78b55b2c58f3876095c5d2&libraries=services"
-></script>
-<script src="../../static/js/mypage/kakao.js"></script>
 </html>

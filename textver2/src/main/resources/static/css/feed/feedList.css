@@ -126,7 +126,7 @@ textarea {
     overflow-x: hidden;
 }
 .FeedList > div {
-    width: 33.3333%;
+    width: 100%;
     padding: 30px 20px;
     border-bottom: 1px solid rgb(238, 238, 238);
     border-left: 1px solid rgb(238, 238, 238);
@@ -302,7 +302,7 @@ textarea {
 
 .post .con-wrap {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 36px;
 }
 .post .con-wrap .tit {
     font-weight: 600;
@@ -310,7 +310,7 @@ textarea {
     margin-bottom: 15px;
 }
 .post .con-wrap .content {
-    font-size: 12px;
+    font-size: 14px;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
