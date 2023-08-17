@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <!--트레이드 상세 페이지-->
-
-
-<th:block layout:fragment="head"></th:block>
-
     <meta charset="UTF-8">
     <title>교환해요 상세</title>
-
-    <link rel="stylesheet" href="../../static/css/trade/tradeDetailPage.css">
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="../../../static/css/inc/reset.css">
     <link rel="stylesheet" href="../../../static/css/font/font.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <script src="../../static/js/trade/tradeDetailPage.js" defer></script>
+    <!-- 공통 js -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- 페이지 css-->
+    <link rel="stylesheet" href="../../static/css/trade/tradeDetailPage.css">
+    <!-- 페이지 js -->
+    <script src="../../static/js/trade/tradeDetailPage.js" defer></script>
 
 <body>
-<!--<header th:replace = "~{header.html}::#header"></header>-->
 <th:block layout:fragment="header"></th:block>
 
 <div id="app" layout:fragment="content" class="content">

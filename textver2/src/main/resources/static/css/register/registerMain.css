@@ -159,7 +159,6 @@ p, label {
 }
 
 .kakaoButton{
-    width: 48px;
     height: 48px;
     line-height: normal;
     padding: 0px 13px;
@@ -171,7 +170,7 @@ p, label {
 }
 
 .loginButton{
-    width: 251px;
+    width: 177px;
     height: 48px;
     line-height: 20px;
     padding: 0px 13px;

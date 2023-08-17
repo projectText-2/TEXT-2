@@ -1,20 +1,3 @@
-// // 공통 헤더 푸터 인클루드
-// window.addEventListener('load', function() {
-//     var allElements = document.getElementsByTagName('*');
-//     Array.prototype.forEach.call(allElements, function(el) {
-//         var includePath = el.dataset.includePath;
-//         if (includePath) {
-//             var xhttp = new XMLHttpRequest();
-//             xhttp.onreadystatechange = function () {
-//                 if (this.readyState == 4 && this.status == 200) {
-//                     el.outerHTML = this.responseText;
-//                 }
-//             };
-//             xhttp.open('GET', includePath, true);
-//             xhttp.send();
-//         }
-//     });
-// });
 $(document).ready(function(){
     // 검색 변수
     const $search = $("#head .search");
@@ -64,4 +47,19 @@ $(document).ready(function(){
         $cateLayer.fadeIn("fast");
         $cateLayer.addClass("mo-cate");
     })
+
+    // DM 공통 JS
+    const $chatBtn = $(".chat-btn");
+    const $chat = $("#chat");
+    console.log("ddd");
+    $chatBtn.on("click",function(){
+        if($chat.css("display") == "none"){
+            $chat.fadeIn("fast");
+        }else{
+            $chat.fadeOut("fast");
+        }
+    })
+
+    autosize($("textarea"));
+
 });

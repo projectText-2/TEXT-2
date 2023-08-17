@@ -116,6 +116,11 @@ a {
     -webkit-text-decoration-skip: objects;
 }
 
+a:after {
+    text-decoration: none;
+    color: white;
+}
+
 a,
 area,
 button,
@@ -131,7 +136,7 @@ textarea,
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 img {
@@ -580,7 +585,7 @@ h2 {
 
 .mapmap2 {
     position: relative;
-    height: 164px;
+    height: 300px;
 }
 
 .showMap {
@@ -723,7 +728,9 @@ h2 {
 
 .clickButton {
     -webkit-box-flex: 0;
+    text-decoration: none;
     flex: 0 0 auto;
+    color: white;
 }
 
 /*여기부터 댓글 css*/
@@ -909,7 +916,7 @@ h2 {
     text-align: left;
 }
 
-.noshow{
+.noshow {
     display: none;
 }
 
@@ -924,9 +931,11 @@ h2 {
     position: relative;
     width: 90%;
 }
-.position7{
+
+.position7 {
     position: relative;
-    width: 80%;
+    width: 70%;
+    left: 10%;
 }
 
 .puter {
@@ -967,7 +976,7 @@ h2 {
 }
 
 .submitBu:disabled,
-.submitBu2:disabled{
+.submitBu2:disabled {
     border: none;
     background: rgb(238, 238, 238);
     color: rgb(170, 170, 170);
@@ -979,9 +988,7 @@ h2 {
     color: rgb(51, 51, 51);
     display: inline-block;
     -webkit-box-pack: center;
-    justify-content: center;
     -webkit-box-align: center;
-    align-items: center;
     box-sizing: border-box;
     font-weight: 500;
     letter-spacing: -0.03em;
@@ -992,6 +999,10 @@ h2 {
     padding: 13px 18px;
     font-size: 14px;
     line-height: 22px;
+
+    /*position: relative;*/
+    /*right: -30px;*/
+    margin-left: 11%;
 }
 
 
@@ -1121,8 +1132,9 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     align-items: center;
     transform: rotate(0deg);
 }
-.controllerWrap{
-    margin-top:15px;
+
+.controllerWrap {
+    margin-top: 15px;
 }
 
 .controller {
@@ -1133,7 +1145,7 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     margin: 20px 0;
 }
 
-.controller span{
+.controller span {
     margin: 5px;
     vertical-align: middle;
     color: gray;
@@ -1154,26 +1166,37 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     min-height: 1px;
 }
 
-.opacity{
+.opacity {
     position: fixed;
     inset: 0px;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+
+    text-align: center;
+
 }
 
-.contentsWrp{
+.contentsWrp {
     position: absolute;
     background-color: white;
     bottom: 0;
-    width: 50%;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+
+    background-color: rgb(122, 41, 250);
+    color: white;
+
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
 }
 
 .verCenter {
     display: flex;
     flex-direction: row;
     max-width: 100%;
-
 }
+
 .forCenter {
     position: relative;
     -webkit-box-flex: 0;
@@ -1201,27 +1224,42 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     border-radius: 1rem;
 }
 
-.center{
+.center {
     vertical-align: center;
+}
+
+.center2 {
+    float: left;
 }
 
 .overhide {
     overflow: hidden auto;
 }
+
 .reportWrap {
-    /*display: flex;*/
+    display: inline-block;
+
     /*padding: 20px 30px 30px;*/
-    margin: 10px;
-    background-color: white;
+    margin-bottom: 20px;
+
+    background-color: rgb(122, 41, 250);
+    width: 450px;
+    color: white;
 }
 
 .reportWrap span,
-.reportWrap button{
-    font-size: 30px;
+.reportWrap button {
+    font-size: 50px;
     cursor: pointer;
 }
 
+.reportWrap span {
+    margin-bottom: 10px;
+}
+
+
 .reportText {
+    font-size: 30px;
     display: inline-block;
     margin-top: 15px;
     line-height: 18px;
@@ -1230,22 +1268,59 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     vertical-align: center;
 }
 
-.disD{
-    display: block;
+.disD {
+    margin-left: 20px;
 }
 
-.noShow2{
+.noShow2 {
     display: inline-block;
 }
 
+.disF {
+    display: flex;
+    width: 100%;
+}
 
 
+input[type=checkbox] {
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
 
+    padding: 10px;
+}
 
+.listWrap {
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: white;
+    width: 50%;
+    height: 60%;
+}
 
+.owner {
+    margin-right: 10%;
+}
 
+.closeImg {
+    width: 30px;
+    padding-top: 10px;
+    display: block;
+    margin: 0 auto;
+}
 
+.closeImg2 {
+    position: relative;
+    display: block;
+    h: 4%;
+    left: 96%;
+    padding-top: 10px;
+}
 
-
+.closebtn {
+    width: 100%;
+    display: block;
+}
 
 

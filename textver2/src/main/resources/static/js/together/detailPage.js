@@ -32,7 +32,33 @@ function likeOn() {
 
 // /////////////////////////////////////////////////
 $(document).ready(function () {
-    $(".slick-slide").not(".active").hide(); //화면 로딩 후 첫번째 div를 제외한 나머지 숨김
+    //화면 로딩 후 첫번째 div를 제외한 나머지 숨김
+    $(".slick-slide").not(".active").hide();
+
+//    모달 가리기
+    $(".modalShow").hide();
+    $(".opacity").hide();
+    $(".contentsWrp").hide();
+    $(".listWrap").hide();
+
+    //onwer를 none하면 정렬이 깨져서 block으로 변경
+    // 백엔드 작업시 주석 제거해 주세요
+    // if("작성자가 아니면"){
+        $(".center2").css("display", "block");
+    // }
+    
+    if ($(".center2").css("display", "block")) {
+        $(".reportWrap").css("width", "180px");
+    }
+
+    $(".owner").css("display", "none");
+
+    // 게시글 주인이라면 삭제 버튼 보이게 만들기
+    // if("이글의 게시자 라면"){
+    // owner가 들어오면서 정렬이 바뀌니 다시 flex로
+    // $(".center2").css("display", "flex");
+    // $(".owner").css("display", "flex");
+    // }
 
     HTMLCollection.prototype.forEach = Array.prototype.forEach;
     let count = 0;
@@ -40,15 +66,9 @@ $(document).ready(function () {
     const bannerWrap = document.querySelector('.slick-track');
     const banners = document.querySelectorAll('.imgs');
     banners.forEach((banner, i) => {
+        //작성자가 넣은 이미지가 나오게 수정해야함
         banner.src = `../../static/img/togetherImg/${i + 1}.jpg`;
     });
-//    모달 가리기
-    $(".modalShow").hide();
-    $(".opacity").hide();
-    // 신고하기 누르면 보이게 만들기
-    // $(".noShow2").hide();
-
-    // $(".commentForm").hide();
 });
 
 //이전 슬라이드
@@ -113,30 +133,47 @@ function nextSlide() {
     $(".slick-slide").removeClass("active");
     $(".slick-slide").eq(newIndex).addClass("active");
     $(".slick-slide").eq(newIndex).show();
-
 }
 
 ///////////////////////////////////////////////////////////////////
 
-function modalShow() {
+//이게 모달로 보이는 신고하기 누르면 동작하는 코드
+//이걸로 hide()을 하며 신고하기 쿼리가 나가면 된다
+function report() {
     if ($(".opacity").css("display") == "none") {
         $(".opacity").show();
+        $(".contentsWrp").show();
     } else {
         noShow();
     }
 }
 
 
-function noShow() {
-    $(".opacity").hide();
-}
-
-function report() {
+// 참여하기 한사람들이 보이는 모달 띄우기
+function listShow() {
     if ($(".opacity").css("display") == "none") {
         $(".opacity").show();
+        $(".listWrap").show();
+    } else {
+        noShow();
     }
 }
+
+
+function deletePost() {
+//    여기에 게시물 삭제되게 서버에 뭐시꺵이 하기
+
+}
+
+function noShow() {
+    $(".opacity").hide();
+    $(".contentsWrp").hide();
+    $(".listWrap").hide();
+}
+
+
 //자신 하위의 input이 보이게 만들기
+//가려진 대댓글 입력 창 보이게 위해서
 function showInp(el) {
     console.log($(el));
     $(el).next().removeClass('noshow').addClass('commentForm');
